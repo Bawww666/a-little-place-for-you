@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Place for You ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" autoplay loop preload="auto">
+    <source src="music/our-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#home" class="logo">little things ♡</a>
+
+    <div class="nav-links">
+      <a href="#story">Our Story</a>
+      <a href="#memories">Memories</a>
+      <a href="#letter">A Letter</a>
+    </div>
+
+    <button id="musicToggle" class="music-button" type="button">
+      ♫ Music On
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">A LITTLE CORNER OF MY HEART</p>
+
+      <h1>Somewhere between ordinary days, I found you.</h1>
+
+      <p class="hero-description">
+        A little website filled with memories, little things,
+        and all the feelings I sometimes find hard to say.
+      </p>
+
+      <a href="#memories" class="primary-button">
+        Explore our memories ♡
+      </a>
+    </div>
+
+    <div class="hero-photos">
+      <div class="polaroid polaroid-one">
+        <img src="images/foto1.jpg" alt="Our memory">
+        <p>one of my favorites ♡</p>
+      </div>
+
+      <div class="polaroid polaroid-two">
+        <img src="images/foto2.jpg" alt="A special moment">
+        <p>you make days better</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story section" id="story">
+    <p class="eyebrow">A LITTLE STORY</p>
+    <h2>It's the little things.</h2>
+
+    <blockquote>
+      "Some people make ordinary moments feel extraordinary."
+    </blockquote>
+
+    <p>
+      Maybe it's the random conversations, the silly jokes,
+      the little moments, or simply having you around.
+      Somehow, those little things became memories I want to keep.
+    </p>
+  </section>
+
+  <!-- MEMORIES -->
+  <section class="memories section" id="memories">
+    <p class="eyebrow">OUR LITTLE UNIVERSE</p>
+    <h2>Pieces of us.</h2>
+
+    <p class="section-description">
+      Little moments that mean more than they seem.
+    </p>
+
+    <div class="gallery-filters">
+      <button class="filter-button active" data-filter="all">All memories</button>
+      <button class="filter-button" data-filter="favorite">Favorites</button>
+      <button class="filter-button" data-filter="everyday">Little days</button>
+    </div>
+
+    <div class="gallery">
+      <article class="photo-card" data-category="favorite"
+        data-note="A moment I want to remember forever.">
+        <img src="images/foto1.jpg" alt="Memory one">
+        <div class="photo-info">
+          <span>MY FAVORITE</span>
+          <h3>A moment with you</h3>
+        </div>
+      </article>
+
+      <article class="photo-card" data-category="everyday"
+        data-note="Even simple days feel special with you.">
+        <img src="images/foto2.jpg" alt="Memory two">
+        <div class="photo-info">
+          <span>LITTLE DAY</span>
+          <h3>Just another day</h3>
+        </div>
+      </article>
+
+      <article class="photo-card" data-category="favorite"
+        data-note="One of those memories that makes me smile.">
+        <img src="images/foto3.jpg" alt="Memory three">
+        <div class="photo-info">
+          <span>KEEP THIS</span>
+          <h3>A happy little memory</h3>
+        </div>
+      </article>
+
+      <article class="photo-card" data-category="everyday"
+        data-note="Nothing fancy, just a moment worth keeping.">
+        <img src="images/foto4.jpg" alt="Memory four">
+        <div class="photo-info">
+          <span>THE LITTLE THINGS</span>
+          <h3>Nothing but us</h3>
+        </div>
+      </article>
+
+      <article class="photo-card" data-category="favorite"
+        data-note="If I could revisit a moment, this would be one.">
+        <img src="images/foto5.jpg" alt="Memory five">
+        <div class="photo-info">
+          <span>DEAR MEMORY</span>
+          <h3>One to remember</h3>
+        </div>
+      </article>
+
+      <article class="photo-card" data-category="everyday"
+        data-note="Here's to more little moments together.">
+        <img src="images/foto6.jpg" alt="Memory six">
+        <div class="photo-info">
+          <span>MORE TO COME</span>
+          <h3>To more memories</h3>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- LETTER -->
+  <section class="letter-section section" id="letter">
+    <p class="eyebrow">JUST FOR YOU</p>
+    <h2>A little letter.</h2>
+
+    <p>
+      Aku mau kamu tahu kalo aku tu sayang banget sama kamu
+      dan aku berharap kamu juga sama sayangnya ke aku
+    </p>
+
+    <button id="openLetter" class="primary-button" type="button">
+      Open your letter ♡
+    </button>
+  </section>
+
+  <!-- LETTER MODAL -->
+  <div class="modal" id="letterModal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeLetter" class="close-button" type="button"
+        aria-label="Close letter">&times;</button>
+
+      <p class="eyebrow">A LETTER FOR YOU</p>
+      <h2>Hey, you. ♡</h2>
+
+      <p>
+        I just want you to know that I'm grateful you're here.
+        Thank you for the little moments, the laughter,
+        and the memories that have become special to me.
+      </p>
+
+      <p>
+        I don't need every day to be perfect.
+        I just hope we keep finding reasons to smile,
+        making memories, and appreciating the little things.
+      </p>
+
+      <p>With love, always. ♡</p>
+    </div>
+  </div>
+
+  <!-- PHOTO LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button id="closeLightbox" class="close-button" type="button"
+      aria-label="Close photo">&times;</button>
+
+    <button id="prevPhoto" class="lightbox-arrow" type="button"
+      aria-label="Previous photo">&#10094;</button>
+
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="Selected memory">
+      <h3 id="lightboxCaption"></h3>
+      <p id="lightboxNote"></p>
+    </div>
+
+    <button id="nextPhoto" class="lightbox-arrow" type="button"
+      aria-label="Next photo">&#10095;</button>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <footer class="footer">
+    Made with a little love ♡
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
